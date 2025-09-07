@@ -1,0 +1,116 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Mon Oct 14 16:20:38 2024
+# Process ID: 19560
+# Current directory: D:/DLab/lab5_for_student/lab5_for_student.runs/impl_1
+# Command line: vivado.exe -log lab5.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source lab5.tcl -notrace
+# Log file: D:/DLab/lab5_for_student/lab5_for_student.runs/impl_1/lab5.vdi
+# Journal file: D:/DLab/lab5_for_student/lab5_for_student.runs/impl_1\vivado.jou
+# Running On        :Apollos-notebook
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :22631
+# Processor Detail  :13th Gen Intel(R) Core(TM) i7-13700HX
+# CPU Frequency     :2304 MHz
+# CPU Physical cores:16
+# CPU Logical cores :24
+# Host memory       :16886 MB
+# Swap memory       :26843 MB
+# Total Virtual     :43729 MB
+# Available Virtual :23287 MB
+#-----------------------------------------------------------
+source lab5.tcl -notrace
+create_project: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 508.691 ; gain = 200.605
+Command: link_design -top lab5 -part xc7a35ticsg324-1L
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7a35ticsg324-1L
+INFO: [Device 21-9227] Part: xc7a35ticsg324-1L does not have CEAM library.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 915.965 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [D:/DLab/lab5_for_student/lab5_for_student.srcs/constrs_1/new/lab5.xdc]
+WARNING: [Vivado 12-584] No ports matched 'clk'. [D:/DLab/lab5_for_student/lab5_for_student.srcs/constrs_1/new/lab5.xdc:9]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/DLab/lab5_for_student/lab5_for_student.srcs/constrs_1/new/lab5.xdc:9]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'clk'. [D:/DLab/lab5_for_student/lab5_for_student.srcs/constrs_1/new/lab5.xdc:10]
+CRITICAL WARNING: [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports clk]'. [D:/DLab/lab5_for_student/lab5_for_student.srcs/constrs_1/new/lab5.xdc:10]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-584] No ports matched 'reset_n'. [D:/DLab/lab5_for_student/lab5_for_student.srcs/constrs_1/new/lab5.xdc:12]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/DLab/lab5_for_student/lab5_for_student.srcs/constrs_1/new/lab5.xdc:12]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'usr_sw[0]'. [D:/DLab/lab5_for_student/lab5_for_student.srcs/constrs_1/new/lab5.xdc:16]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/DLab/lab5_for_student/lab5_for_student.srcs/constrs_1/new/lab5.xdc:16]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'usr_sw[1]'. [D:/DLab/lab5_for_student/lab5_for_student.srcs/constrs_1/new/lab5.xdc:17]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/DLab/lab5_for_student/lab5_for_student.srcs/constrs_1/new/lab5.xdc:17]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'usr_sw[2]'. [D:/DLab/lab5_for_student/lab5_for_student.srcs/constrs_1/new/lab5.xdc:18]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/DLab/lab5_for_student/lab5_for_student.srcs/constrs_1/new/lab5.xdc:18]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'usr_sw[3]'. [D:/DLab/lab5_for_student/lab5_for_student.srcs/constrs_1/new/lab5.xdc:19]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/DLab/lab5_for_student/lab5_for_student.srcs/constrs_1/new/lab5.xdc:19]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'usr_led[0]'. [D:/DLab/lab5_for_student/lab5_for_student.srcs/constrs_1/new/lab5.xdc:24]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/DLab/lab5_for_student/lab5_for_student.srcs/constrs_1/new/lab5.xdc:24]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'usr_led[1]'. [D:/DLab/lab5_for_student/lab5_for_student.srcs/constrs_1/new/lab5.xdc:25]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/DLab/lab5_for_student/lab5_for_student.srcs/constrs_1/new/lab5.xdc:25]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'usr_led[2]'. [D:/DLab/lab5_for_student/lab5_for_student.srcs/constrs_1/new/lab5.xdc:26]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/DLab/lab5_for_student/lab5_for_student.srcs/constrs_1/new/lab5.xdc:26]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'usr_led[3]'. [D:/DLab/lab5_for_student/lab5_for_student.srcs/constrs_1/new/lab5.xdc:27]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/DLab/lab5_for_student/lab5_for_student.srcs/constrs_1/new/lab5.xdc:27]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'usr_btn[0]'. [D:/DLab/lab5_for_student/lab5_for_student.srcs/constrs_1/new/lab5.xdc:44]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/DLab/lab5_for_student/lab5_for_student.srcs/constrs_1/new/lab5.xdc:44]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'usr_btn[1]'. [D:/DLab/lab5_for_student/lab5_for_student.srcs/constrs_1/new/lab5.xdc:45]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/DLab/lab5_for_student/lab5_for_student.srcs/constrs_1/new/lab5.xdc:45]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'usr_btn[2]'. [D:/DLab/lab5_for_student/lab5_for_student.srcs/constrs_1/new/lab5.xdc:46]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/DLab/lab5_for_student/lab5_for_student.srcs/constrs_1/new/lab5.xdc:46]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'usr_btn[3]'. [D:/DLab/lab5_for_student/lab5_for_student.srcs/constrs_1/new/lab5.xdc:47]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/DLab/lab5_for_student/lab5_for_student.srcs/constrs_1/new/lab5.xdc:47]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LCD_E'. [D:/DLab/lab5_for_student/lab5_for_student.srcs/constrs_1/new/lab5.xdc:62]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/DLab/lab5_for_student/lab5_for_student.srcs/constrs_1/new/lab5.xdc:62]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LCD_RW'. [D:/DLab/lab5_for_student/lab5_for_student.srcs/constrs_1/new/lab5.xdc:63]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/DLab/lab5_for_student/lab5_for_student.srcs/constrs_1/new/lab5.xdc:63]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LCD_RS'. [D:/DLab/lab5_for_student/lab5_for_student.srcs/constrs_1/new/lab5.xdc:64]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/DLab/lab5_for_student/lab5_for_student.srcs/constrs_1/new/lab5.xdc:64]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LCD_D[3]'. [D:/DLab/lab5_for_student/lab5_for_student.srcs/constrs_1/new/lab5.xdc:65]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/DLab/lab5_for_student/lab5_for_student.srcs/constrs_1/new/lab5.xdc:65]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LCD_D[2]'. [D:/DLab/lab5_for_student/lab5_for_student.srcs/constrs_1/new/lab5.xdc:66]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/DLab/lab5_for_student/lab5_for_student.srcs/constrs_1/new/lab5.xdc:66]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LCD_D[1]'. [D:/DLab/lab5_for_student/lab5_for_student.srcs/constrs_1/new/lab5.xdc:67]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/DLab/lab5_for_student/lab5_for_student.srcs/constrs_1/new/lab5.xdc:67]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LCD_D[0]'. [D:/DLab/lab5_for_student/lab5_for_student.srcs/constrs_1/new/lab5.xdc:68]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/DLab/lab5_for_student/lab5_for_student.srcs/constrs_1/new/lab5.xdc:68]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [D:/DLab/lab5_for_student/lab5_for_student.srcs/constrs_1/new/lab5.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1035.891 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+5 Infos, 22 Warnings, 22 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+
+*** Halting run - EA reset detected ***
+
+
+
+    while executing
+"start_step opt_design"
+    (file "lab5.tcl" line 151)
+INFO: [Common 17-206] Exiting Vivado at Mon Oct 14 16:20:50 2024...

@@ -1,0 +1,516 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Mon Nov 25 17:54:48 2024
+| Host         : Apollos-notebook running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file lab5_control_sets_placed.rpt
+| Design       : lab5
+| Device       : xc7a35ti
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |   438 |
+|    Minimum number of control sets                        |   438 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   232 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |   438 |
+| >= 0 to < 4        |     1 |
+| >= 4 to < 6        |    38 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |    29 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |   369 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               2 |            2 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              98 |           51 |
+| Yes          | No                    | No                     |            9642 |         4424 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |            6306 |         2006 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+--------------------------------------+-----------------------------------+------------------+----------------+--------------+
+|  Clock Signal  |             Enable Signal            |          Set/Reset Signal         | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------+--------------------------------------+-----------------------------------+------------------+----------------+--------------+
+|  clk_IBUF_BUFG |                                      |                                   |                2 |              2 |         1.00 |
+|  clk_IBUF_BUFG | u_sha256_4/W[0][31]_i_1__3_n_0       | u_sha256_4/W[0][15]_i_1__3_n_0    |                4 |              4 |         1.00 |
+|  clk_IBUF_BUFG | u_sha256_2/W[0][31]_i_1__1_n_0       | u_sha256_2/W[0][15]_i_1__1_n_0    |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG | u_sha256_1/W[0][31]_i_1__0_n_0       | u_sha256_1/W[0][15]_i_1__0_n_0    |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG | lcd0/icode                           |                                   |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | counter_2[43]_i_1_n_0                | counter_2[63]_i_1_n_0             |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | u_sha256_3/W[0][31]_i_1__2_n_0       | u_sha256_3/W[0][15]_i_1__2_n_0    |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | counter_2[35]_i_1_n_0                | counter_2[63]_i_1_n_0             |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | lcd0/tcode[3]_i_1_n_0                |                                   |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG | u_sha256_0/W[0][31]_i_1_n_0          | u_sha256_0/W[0][15]_i_1_n_0       |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG | counter_3[12]_i_1_n_0                | counter_3[63]_i_1_n_0             |                1 |              5 |         5.00 |
+|  clk_IBUF_BUFG | counter_2[28]_i_1_n_0                | counter_2[63]_i_1_n_0             |                1 |              5 |         5.00 |
+|  clk_IBUF_BUFG |                                      | restart_4                         |                4 |              5 |         1.25 |
+|  clk_IBUF_BUFG | counter_1[28]_i_1_n_0                | counter_1[63]_i_1_n_0             |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG | counter_3[36]_i_1_n_0                | counter_3[63]_i_1_n_0             |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG | counter_2[20]_i_1_n_0                | counter_2[63]_i_1_n_0             |                1 |              5 |         5.00 |
+|  clk_IBUF_BUFG | counter_2[12]_i_1_n_0                | counter_2[63]_i_1_n_0             |                1 |              5 |         5.00 |
+|  clk_IBUF_BUFG | counter_0[44]_i_1_n_0                | counter_0[63]_i_1_n_0             |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG | counter_0[28]_i_1_n_0                | counter_0[63]_i_1_n_0             |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG | counter_4[28]_i_1_n_0                | counter_4[63]_i_1_n_0             |                1 |              5 |         5.00 |
+|  clk_IBUF_BUFG | counter_0[52]_i_1_n_0                | counter_0[63]_i_1_n_0             |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG | counter_2[52]_i_1_n_0                | counter_2[63]_i_1_n_0             |                1 |              5 |         5.00 |
+|  clk_IBUF_BUFG | counter_1[12]_i_1_n_0                | counter_1[63]_i_1_n_0             |                1 |              5 |         5.00 |
+|  clk_IBUF_BUFG | counter_0[12]_i_1_n_0                | counter_0[63]_i_1_n_0             |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG | counter_1[36]_i_1_n_0                | counter_1[63]_i_1_n_0             |                1 |              5 |         5.00 |
+|  clk_IBUF_BUFG | counter_0[36]_i_1_n_0                | counter_0[63]_i_1_n_0             |                1 |              5 |         5.00 |
+|  clk_IBUF_BUFG | counter_1[44]_i_1_n_0                | counter_1[63]_i_1_n_0             |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG | counter_1[52]_i_1_n_0                | counter_1[63]_i_1_n_0             |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG | counter_3[20]_i_1_n_0                | counter_3[63]_i_1_n_0             |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG | counter_3[28]_i_1_n_0                | counter_3[63]_i_1_n_0             |                1 |              5 |         5.00 |
+|  clk_IBUF_BUFG | counter_3[44]_i_1_n_0                | counter_3[63]_i_1_n_0             |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG | counter_3[52]_i_1_n_0                | counter_3[63]_i_1_n_0             |                1 |              5 |         5.00 |
+|  clk_IBUF_BUFG | counter_4[20]_i_1_n_0                | counter_4[63]_i_1_n_0             |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG | counter_4[12]_i_1_n_0                | counter_4[63]_i_1_n_0             |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG | counter_4[36]_i_1_n_0                | counter_4[63]_i_1_n_0             |                1 |              5 |         5.00 |
+|  clk_IBUF_BUFG | counter_4[52]_i_1_n_0                | counter_4[63]_i_1_n_0             |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG | counter_4[44]_i_1_n_0                | counter_4[63]_i_1_n_0             |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG | counter_1[20]_i_1_n_0                | counter_1[63]_i_1_n_0             |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG | counter_0[20]_i_1_n_0                | counter_0[63]_i_1_n_0             |                1 |              5 |         5.00 |
+|  clk_IBUF_BUFG | lcd0/lcd_initialized_reg_n_0         | u_sha256_1/reset_n                |                3 |              7 |         2.33 |
+|  clk_IBUF_BUFG | u_sha256_2/W[2][31]_i_1__1_n_0       |                                   |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | u_sha256_1/W[2][31]_i_1__0_n_0       |                                   |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | counter_1[63]_i_2_n_0                | counter_1[63]_i_1_n_0             |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | u_sha256_2/W[1][29]_i_1__1_n_0       | u_sha256_2/W[1][31]_i_1__1_n_0    |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG | counter_0[71]_i_2_n_0                | counter_0[71]_i_1_n_0             |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | u_sha256_0/W[1][29]_i_1_n_0          | u_sha256_0/W[1][31]_i_1_n_0       |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_sha256_0/E[1]                      |                                   |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | counter_3[63]_i_2_n_0                | counter_3[63]_i_1_n_0             |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | u_sha256_0/E[0]                      |                                   |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG | counter_3[71]_i_2_n_0                | counter_3[71]_i_1_n_0             |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | u_sha256_1/W[1][29]_i_1__0_n_0       | u_sha256_1/W[1][31]_i_1__0_n_0    |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_sha256_1/E[1]                      |                                   |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG | counter_2[71]_i_2_n_0                | counter_2[71]_i_1_n_0             |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | u_sha256_0/W[2][31]_i_1_n_0          |                                   |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | counter_4[63]_i_2_n_0                | counter_4[63]_i_1_n_0             |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | u_sha256_1/E[0]                      |                                   |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG | counter_4[71]_i_2_n_0                | counter_4[71]_i_1_n_0             |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | counter_0[63]_i_2_n_0                | counter_0[63]_i_1_n_0             |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | counter_1[71]_i_2_n_0                | counter_1[71]_i_1_n_0             |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | u_sha256_3/W[1][29]_i_1__2_n_0       | u_sha256_3/W[1][31]_i_1__2_n_0    |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | u_sha256_3/W[2][31]_i_1__2_n_0       |                                   |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | u_sha256_4/found_password_reg[23][0] |                                   |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_sha256_3/E[2]                      |                                   |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | u_sha256_3/E[3]                      |                                   |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | u_sha256_3/E[1]                      |                                   |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_sha256_3/E[0]                      |                                   |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG | counter_2[63]_i_2_n_0                | counter_2[63]_i_1_n_0             |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | u_sha256_4/W[1][29]_i_1__3_n_0       | u_sha256_4/W[1][31]_i_1__3_n_0    |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_sha256_4/W[2][31]_i_1__3_n_0       |                                   |                1 |              8 |         8.00 |
+|  clk_IBUF_BUFG | u_sha256_3/t[6]_i_1__2_n_0           | u_sha256_1/reset_n                |               13 |             17 |         1.31 |
+|  clk_IBUF_BUFG | u_sha256_0/t[6]_i_1_n_0              | u_sha256_1/reset_n                |                8 |             17 |         2.12 |
+|  clk_IBUF_BUFG | u_sha256_4/t[6]_i_1__3_n_0           | u_sha256_1/reset_n                |                8 |             17 |         2.12 |
+|  clk_IBUF_BUFG | u_sha256_1/t[6]_i_1__0_n_0           | u_sha256_1/reset_n                |                6 |             18 |         3.00 |
+|  clk_IBUF_BUFG | u_sha256_2/t[6]_i_1__1_n_0           | u_sha256_1/reset_n                |                6 |             18 |         3.00 |
+|  clk_IBUF_BUFG |                                      | btn_db0/clear                     |                6 |             22 |         3.67 |
+|  clk_IBUF_BUFG | u_sha256_3/W[1][29]_i_1__2_n_0       |                                   |                6 |             24 |         4.00 |
+|  clk_IBUF_BUFG | u_sha256_0/W[2][31]_i_1_n_0          | u_sha256_0/W[2][22]_i_1_n_0       |               15 |             24 |         1.60 |
+|  clk_IBUF_BUFG | u_sha256_1/W[1][29]_i_1__0_n_0       |                                   |                8 |             24 |         3.00 |
+|  clk_IBUF_BUFG | u_sha256_3/W[2][31]_i_1__2_n_0       | u_sha256_3/W[2][22]_i_1__2_n_0    |               11 |             24 |         2.18 |
+|  clk_IBUF_BUFG | u_sha256_0/W[1][29]_i_1_n_0          |                                   |                6 |             24 |         4.00 |
+|  clk_IBUF_BUFG | u_sha256_1/W[2][31]_i_1__0_n_0       | u_sha256_1/W[2][22]_i_1__0_n_0    |               13 |             24 |         1.85 |
+|  clk_IBUF_BUFG | u_sha256_2/W[1][29]_i_1__1_n_0       |                                   |                7 |             24 |         3.43 |
+|  clk_IBUF_BUFG | u_sha256_2/W[2][31]_i_1__1_n_0       | u_sha256_2/W[2][22]_i_1__1_n_0    |               13 |             24 |         1.85 |
+|  clk_IBUF_BUFG | u_sha256_4/W[1][29]_i_1__3_n_0       |                                   |                8 |             24 |         3.00 |
+|  clk_IBUF_BUFG | u_sha256_4/W[2][31]_i_1__3_n_0       | u_sha256_4/W[2][22]_i_1__3_n_0    |               13 |             24 |         1.85 |
+|  clk_IBUF_BUFG | lcd0/lcd_initialized_reg_n_0         | lcd0/text_count[0]_i_1_n_0        |                7 |             25 |         3.57 |
+|  clk_IBUF_BUFG | u_sha256_3/W[0][31]_i_1__2_n_0       |                                   |                7 |             28 |         4.00 |
+|  clk_IBUF_BUFG | u_sha256_2/W[0][31]_i_1__1_n_0       |                                   |                8 |             28 |         3.50 |
+|  clk_IBUF_BUFG | u_sha256_1/W[0][31]_i_1__0_n_0       |                                   |                8 |             28 |         3.50 |
+|  clk_IBUF_BUFG | u_sha256_0/W[0][31]_i_1_n_0          |                                   |                7 |             28 |         4.00 |
+|  clk_IBUF_BUFG | u_sha256_4/W[0][31]_i_1__3_n_0       |                                   |                7 |             28 |         4.00 |
+|  clk_IBUF_BUFG | u_sha256_0/W[4][31]_i_2_n_0          | u_sha256_0/W[4][31]_i_1_n_0       |               20 |             32 |         1.60 |
+|  clk_IBUF_BUFG | u_sha256_0/W[40][31]_i_1_n_0         |                                   |               18 |             32 |         1.78 |
+|  clk_IBUF_BUFG | u_sha256_0/W[52][31]_i_1_n_0         |                                   |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG | u_sha256_0/W[54][31]_i_1_n_0         |                                   |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG | u_sha256_0/W[55][31]_i_1_n_0         |                                   |               21 |             32 |         1.52 |
+|  clk_IBUF_BUFG | u_sha256_0/W[46][31]_i_1_n_0         |                                   |               19 |             32 |         1.68 |
+|  clk_IBUF_BUFG | u_sha256_0/W[43][31]_i_1_n_0         |                                   |               20 |             32 |         1.60 |
+|  clk_IBUF_BUFG | u_sha256_0/W[48][31]_i_1_n_0         |                                   |               17 |             32 |         1.88 |
+|  clk_IBUF_BUFG | u_sha256_0/W[3][31]_i_2_n_0          | u_sha256_0/W[3][31]_i_1_n_0       |               15 |             32 |         2.13 |
+|  clk_IBUF_BUFG | u_sha256_0/W[53][31]_i_1_n_0         |                                   |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG | u_sha256_0/W[49][31]_i_1_n_0         |                                   |               17 |             32 |         1.88 |
+|  clk_IBUF_BUFG | u_sha256_0/W[56][31]_i_1_n_0         |                                   |               17 |             32 |         1.88 |
+|  clk_IBUF_BUFG | u_sha256_0/W[8][31]_i_2_n_0          | u_sha256_0/W[8][31]_i_1_n_0       |               20 |             32 |         1.60 |
+|  clk_IBUF_BUFG | u_sha256_0/W[5][31]_i_2_n_0          | u_sha256_0/W[5][31]_i_1_n_0       |               17 |             32 |         1.88 |
+|  clk_IBUF_BUFG | u_sha256_0/W[59][31]_i_1_n_0         |                                   |               18 |             32 |         1.78 |
+|  clk_IBUF_BUFG | u_sha256_0/W[58][31]_i_1_n_0         |                                   |               18 |             32 |         1.78 |
+|  clk_IBUF_BUFG | u_sha256_0/W[6][31]_i_2__1_n_0       | u_sha256_0/W[6][31]_i_1__3_n_0    |               15 |             32 |         2.13 |
+|  clk_IBUF_BUFG | u_sha256_0/W[7][31]_i_2_n_0          | u_sha256_0/W[7][31]_i_1_n_0       |               21 |             32 |         1.52 |
+|  clk_IBUF_BUFG | u_sha256_0/W[61][31]_i_1_n_0         |                                   |               18 |             32 |         1.78 |
+|  clk_IBUF_BUFG | u_sha256_0/W[63][31]_i_1_n_0         |                                   |               20 |             32 |         1.60 |
+|  clk_IBUF_BUFG | u_sha256_0/W[62][31]_i_1_n_0         |                                   |               21 |             32 |         1.52 |
+|  clk_IBUF_BUFG | u_sha256_0/W[9][31]_i_2_n_0          | u_sha256_0/W[9][31]_i_1_n_0       |               17 |             32 |         1.88 |
+|  clk_IBUF_BUFG | u_sha256_0/W[60][31]_i_1_n_0         |                                   |               26 |             32 |         1.23 |
+|  clk_IBUF_BUFG | u_sha256_1/W[12][31]_i_2__0_n_0      | u_sha256_1/W[12][31]_i_1__0_n_0   |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG | u_sha256_1/W[14][31]_i_2__0_n_0      | u_sha256_1/W[14][31]_i_1__0_n_0   |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG | u_sha256_1/W[16][31]_i_1__0_n_0      |                                   |               18 |             32 |         1.78 |
+|  clk_IBUF_BUFG | u_sha256_1/W[19][31]_i_1__0_n_0      |                                   |               15 |             32 |         2.13 |
+|  clk_IBUF_BUFG | u_sha256_1/W[11][31]_i_2__0_n_0      | u_sha256_1/W[11][31]_i_1__0_n_0   |               12 |             32 |         2.67 |
+|  clk_IBUF_BUFG | u_sha256_1/W[17][31]_i_1__0_n_0      |                                   |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG | u_sha256_1/W[15][31]_i_2__0_n_0      | u_sha256_1/W[15][31]_i_1__0_n_0   |               17 |             32 |         1.88 |
+|  clk_IBUF_BUFG | u_sha256_1/W[10][31]_i_2__0_n_0      | u_sha256_1/W[10][31]_i_1__0_n_0   |               11 |             32 |         2.91 |
+|  clk_IBUF_BUFG | u_sha256_1/W[13][31]_i_2__0_n_0      | u_sha256_1/W[13][31]_i_1__0_n_0   |               12 |             32 |         2.67 |
+|  clk_IBUF_BUFG | u_sha256_1/W[18][31]_i_1__0_n_0      |                                   |               18 |             32 |         1.78 |
+|  clk_IBUF_BUFG | u_sha256_1/W[22][31]_i_1__0_n_0      |                                   |               17 |             32 |         1.88 |
+|  clk_IBUF_BUFG | u_sha256_1/W[24][31]_i_1__0_n_0      |                                   |               20 |             32 |         1.60 |
+|  clk_IBUF_BUFG | u_sha256_1/W[25][31]_i_1__0_n_0      |                                   |               20 |             32 |         1.60 |
+|  clk_IBUF_BUFG | u_sha256_1/W[27][31]_i_1__0_n_0      |                                   |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG | u_sha256_1/W[23][31]_i_1__0_n_0      |                                   |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG | u_sha256_1/W[20][31]_i_1__0_n_0      |                                   |               15 |             32 |         2.13 |
+|  clk_IBUF_BUFG | u_sha256_1/W[29][31]_i_1__0_n_0      |                                   |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG | u_sha256_1/W[28][31]_i_1__0_n_0      |                                   |               17 |             32 |         1.88 |
+|  clk_IBUF_BUFG | u_sha256_1/W[26][31]_i_1__0_n_0      |                                   |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG | u_sha256_1/W[21][31]_i_1__0_n_0      |                                   |               11 |             32 |         2.91 |
+|  clk_IBUF_BUFG | u_sha256_1/W[39][31]_i_1__0_n_0      |                                   |               20 |             32 |         1.60 |
+|  clk_IBUF_BUFG | u_sha256_1/W[37][31]_i_1__0_n_0      |                                   |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG | u_sha256_1/W[35][31]_i_1__0_n_0      |                                   |               18 |             32 |         1.78 |
+|  clk_IBUF_BUFG | u_sha256_1/W[38][31]_i_1__0_n_0      |                                   |               17 |             32 |         1.88 |
+|  clk_IBUF_BUFG | u_sha256_1/W[34][31]_i_1__0_n_0      |                                   |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG | u_sha256_1/W[30][31]_i_1__0_n_0      |                                   |               15 |             32 |         2.13 |
+|  clk_IBUF_BUFG | u_sha256_1/W[36][31]_i_1__0_n_0      |                                   |               19 |             32 |         1.68 |
+|  clk_IBUF_BUFG | u_sha256_1/W[33][31]_i_1__0_n_0      |                                   |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG | u_sha256_1/W[32][31]_i_1__0_n_0      |                                   |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG | u_sha256_1/W[31][31]_i_1__0_n_0      |                                   |               18 |             32 |         1.78 |
+|  clk_IBUF_BUFG | u_sha256_1/W[41][31]_i_1__0_n_0      |                                   |               18 |             32 |         1.78 |
+|  clk_IBUF_BUFG | u_sha256_1/W[40][31]_i_1__0_n_0      |                                   |               20 |             32 |         1.60 |
+|  clk_IBUF_BUFG | u_sha256_1/W[43][31]_i_1__0_n_0      |                                   |               15 |             32 |         2.13 |
+|  clk_IBUF_BUFG | u_sha256_1/W[47][31]_i_1__0_n_0      |                                   |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG | u_sha256_1/W[3][31]_i_2__0_n_0       | u_sha256_1/W[3][31]_i_1__0_n_0    |               17 |             32 |         1.88 |
+|  clk_IBUF_BUFG | u_sha256_1/W[49][31]_i_1__0_n_0      |                                   |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG | u_sha256_1/W[4][31]_i_2__0_n_0       | u_sha256_1/W[4][31]_i_1__0_n_0    |               17 |             32 |         1.88 |
+|  clk_IBUF_BUFG | u_sha256_1/W[52][31]_i_1__0_n_0      |                                   |               15 |             32 |         2.13 |
+|  clk_IBUF_BUFG | u_sha256_1/W[53][31]_i_1__0_n_0      |                                   |               15 |             32 |         2.13 |
+|  clk_IBUF_BUFG | u_sha256_1/W[54][31]_i_1__0_n_0      |                                   |               18 |             32 |         1.78 |
+|  clk_IBUF_BUFG | u_sha256_1/W[56][31]_i_1__0_n_0      |                                   |               19 |             32 |         1.68 |
+|  clk_IBUF_BUFG | u_sha256_1/W[57][31]_i_1__0_n_0      |                                   |               15 |             32 |         2.13 |
+|  clk_IBUF_BUFG | u_sha256_1/W[61][31]_i_1__0_n_0      |                                   |               20 |             32 |         1.60 |
+|  clk_IBUF_BUFG | u_sha256_1/W[63][31]_i_1__0_n_0      |                                   |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG | u_sha256_1/W[48][31]_i_1__0_n_0      |                                   |               17 |             32 |         1.88 |
+|  clk_IBUF_BUFG | u_sha256_1/W[62][31]_i_1__0_n_0      |                                   |               15 |             32 |         2.13 |
+|  clk_IBUF_BUFG | u_sha256_1/W[8][31]_i_2__0_n_0       | u_sha256_1/W[8][31]_i_1__0_n_0    |               17 |             32 |         1.88 |
+|  clk_IBUF_BUFG | u_sha256_1/W[42][31]_i_1__0_n_0      |                                   |               20 |             32 |         1.60 |
+|  clk_IBUF_BUFG | u_sha256_1/W[46][31]_i_1__0_n_0      |                                   |               18 |             32 |         1.78 |
+|  clk_IBUF_BUFG | u_sha256_1/W[51][31]_i_1__0_n_0      |                                   |               18 |             32 |         1.78 |
+|  clk_IBUF_BUFG | u_sha256_1/W[5][31]_i_2__0_n_0       | u_sha256_1/W[5][31]_i_1__0_n_0    |               13 |             32 |         2.46 |
+|  clk_IBUF_BUFG | u_sha256_1/W[44][31]_i_1__0_n_0      |                                   |               17 |             32 |         1.88 |
+|  clk_IBUF_BUFG | u_sha256_1/W[59][31]_i_1__0_n_0      |                                   |               19 |             32 |         1.68 |
+|  clk_IBUF_BUFG | u_sha256_1/W[60][31]_i_1__0_n_0      |                                   |               19 |             32 |         1.68 |
+|  clk_IBUF_BUFG | u_sha256_1/W[50][31]_i_1__0_n_0      |                                   |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG | u_sha256_1/W[6][31]_i_2__2_n_0       | u_sha256_1/W[6][31]_i_1__2_n_0    |               18 |             32 |         1.78 |
+|  clk_IBUF_BUFG | u_sha256_1/W[7][31]_i_2__0_n_0       | u_sha256_1/W[7][31]_i_1__0_n_0    |               17 |             32 |         1.88 |
+|  clk_IBUF_BUFG | u_sha256_1/W[55][31]_i_1__0_n_0      |                                   |               21 |             32 |         1.52 |
+|  clk_IBUF_BUFG | u_sha256_1/W[58][31]_i_1__0_n_0      |                                   |               17 |             32 |         1.88 |
+|  clk_IBUF_BUFG | u_sha256_1/W[45][31]_i_1__0_n_0      |                                   |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG | u_sha256_1/W[9][31]_i_2__0_n_0       | u_sha256_1/W[9][31]_i_1__0_n_0    |               15 |             32 |         2.13 |
+|  clk_IBUF_BUFG | u_sha256_2/W[13][31]_i_2__1_n_0      | u_sha256_2/W[13][31]_i_1__1_n_0   |               11 |             32 |         2.91 |
+|  clk_IBUF_BUFG | u_sha256_2/W[15][31]_i_2__1_n_0      | u_sha256_2/W[15][31]_i_1__1_n_0   |               11 |             32 |         2.91 |
+|  clk_IBUF_BUFG | u_sha256_2/W[19][31]_i_1__1_n_0      |                                   |               19 |             32 |         1.68 |
+|  clk_IBUF_BUFG | u_sha256_2/W[14][31]_i_2__1_n_0      | u_sha256_2/W[14][31]_i_1__1_n_0   |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG | u_sha256_2/W[11][31]_i_2__1_n_0      | u_sha256_2/W[11][31]_i_1__1_n_0   |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG | u_sha256_2/W[10][31]_i_2__1_n_0      | u_sha256_2/W[10][31]_i_1__1_n_0   |               10 |             32 |         3.20 |
+|  clk_IBUF_BUFG | u_sha256_2/W[16][31]_i_1__1_n_0      |                                   |               15 |             32 |         2.13 |
+|  clk_IBUF_BUFG | u_sha256_2/W[17][31]_i_1__1_n_0      |                                   |               15 |             32 |         2.13 |
+|  clk_IBUF_BUFG | u_sha256_2/W[12][31]_i_2__1_n_0      | u_sha256_2/W[12][31]_i_1__1_n_0   |               15 |             32 |         2.13 |
+|  clk_IBUF_BUFG | u_sha256_2/W[18][31]_i_1__1_n_0      |                                   |               18 |             32 |         1.78 |
+|  clk_IBUF_BUFG | u_sha256_2/W[20][31]_i_1__1_n_0      |                                   |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG | u_sha256_2/W[27][31]_i_1__1_n_0      |                                   |               17 |             32 |         1.88 |
+|  clk_IBUF_BUFG | u_sha256_2/W[23][31]_i_1__1_n_0      |                                   |               18 |             32 |         1.78 |
+|  clk_IBUF_BUFG | u_sha256_2/W[28][31]_i_1__1_n_0      |                                   |               13 |             32 |         2.46 |
+|  clk_IBUF_BUFG | u_sha256_2/W[26][31]_i_1__1_n_0      |                                   |               18 |             32 |         1.78 |
+|  clk_IBUF_BUFG | u_sha256_2/W[25][31]_i_1__1_n_0      |                                   |               15 |             32 |         2.13 |
+|  clk_IBUF_BUFG | u_sha256_2/W[29][31]_i_1__1_n_0      |                                   |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG | u_sha256_2/W[21][31]_i_1__1_n_0      |                                   |               19 |             32 |         1.68 |
+|  clk_IBUF_BUFG | u_sha256_2/W[24][31]_i_1__1_n_0      |                                   |               17 |             32 |         1.88 |
+|  clk_IBUF_BUFG | u_sha256_2/W[22][31]_i_1__1_n_0      |                                   |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG | u_sha256_2/W[30][31]_i_1__1_n_0      |                                   |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG | u_sha256_2/W[32][31]_i_1__1_n_0      |                                   |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG | u_sha256_2/W[33][31]_i_1__1_n_0      |                                   |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG | u_sha256_2/W[34][31]_i_1__1_n_0      |                                   |               12 |             32 |         2.67 |
+|  clk_IBUF_BUFG | u_sha256_2/W[31][31]_i_1__1_n_0      |                                   |               17 |             32 |         1.88 |
+|  clk_IBUF_BUFG | u_sha256_2/W[39][31]_i_1__1_n_0      |                                   |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG | u_sha256_2/W[37][31]_i_1__1_n_0      |                                   |               15 |             32 |         2.13 |
+|  clk_IBUF_BUFG | u_sha256_2/W[36][31]_i_1__1_n_0      |                                   |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG | u_sha256_2/W[38][31]_i_1__1_n_0      |                                   |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG | u_sha256_2/W[35][31]_i_1__1_n_0      |                                   |               17 |             32 |         1.88 |
+|  clk_IBUF_BUFG | u_sha256_2/W[62][31]_i_1__1_n_0      |                                   |               20 |             32 |         1.60 |
+|  clk_IBUF_BUFG | u_sha256_2/W[47][31]_i_1__1_n_0      |                                   |               17 |             32 |         1.88 |
+|  clk_IBUF_BUFG | u_sha256_2/W[54][31]_i_1__1_n_0      |                                   |               17 |             32 |         1.88 |
+|  clk_IBUF_BUFG | u_sha256_2/W[56][31]_i_1__1_n_0      |                                   |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG | u_sha256_2/W[49][31]_i_1__1_n_0      |                                   |               11 |             32 |         2.91 |
+|  clk_IBUF_BUFG | u_sha256_2/W[41][31]_i_1__1_n_0      |                                   |               13 |             32 |         2.46 |
+|  clk_IBUF_BUFG | u_sha256_2/W[7][31]_i_2__1_n_0       | u_sha256_2/W[7][31]_i_1__1_n_0    |               15 |             32 |         2.13 |
+|  clk_IBUF_BUFG | u_sha256_2/W[55][31]_i_1__1_n_0      |                                   |               12 |             32 |         2.67 |
+|  clk_IBUF_BUFG | u_sha256_2/W[4][31]_i_2__1_n_0       | u_sha256_2/W[4][31]_i_1__1_n_0    |                9 |             32 |         3.56 |
+|  clk_IBUF_BUFG | u_sha256_2/W[52][31]_i_1__1_n_0      |                                   |               13 |             32 |         2.46 |
+|  clk_IBUF_BUFG | u_sha256_2/W[59][31]_i_1__1_n_0      |                                   |               18 |             32 |         1.78 |
+|  clk_IBUF_BUFG | u_sha256_2/W[46][31]_i_1__1_n_0      |                                   |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG | u_sha256_2/W[40][31]_i_1__1_n_0      |                                   |               17 |             32 |         1.88 |
+|  clk_IBUF_BUFG | u_sha256_2/W[43][31]_i_1__1_n_0      |                                   |               18 |             32 |         1.78 |
+|  clk_IBUF_BUFG | u_sha256_2/W[42][31]_i_1__1_n_0      |                                   |               12 |             32 |         2.67 |
+|  clk_IBUF_BUFG | u_sha256_2/W[51][31]_i_1__1_n_0      |                                   |               12 |             32 |         2.67 |
+|  clk_IBUF_BUFG | u_sha256_2/W[63][31]_i_1__1_n_0      |                                   |               15 |             32 |         2.13 |
+|  clk_IBUF_BUFG | u_sha256_2/W[57][31]_i_1__1_n_0      |                                   |               12 |             32 |         2.67 |
+|  clk_IBUF_BUFG | u_sha256_2/W[58][31]_i_1__1_n_0      |                                   |               15 |             32 |         2.13 |
+|  clk_IBUF_BUFG | u_sha256_2/W[45][31]_i_1__1_n_0      |                                   |               17 |             32 |         1.88 |
+|  clk_IBUF_BUFG | u_sha256_2/W[3][31]_i_2__1_n_0       | u_sha256_2/W[3][31]_i_1__1_n_0    |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG | u_sha256_2/W[50][31]_i_1__1_n_0      |                                   |               13 |             32 |         2.46 |
+|  clk_IBUF_BUFG | u_sha256_2/W[61][31]_i_1__1_n_0      |                                   |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG | u_sha256_2/W[6][31]_i_2__0_n_0       | u_sha256_2/W[6][31]_i_1__1_n_0    |               17 |             32 |         1.88 |
+|  clk_IBUF_BUFG | u_sha256_2/W[8][31]_i_2__1_n_0       | u_sha256_2/W[8][31]_i_1__1_n_0    |               15 |             32 |         2.13 |
+|  clk_IBUF_BUFG | u_sha256_2/W[53][31]_i_1__1_n_0      |                                   |               13 |             32 |         2.46 |
+|  clk_IBUF_BUFG | u_sha256_2/W[48][31]_i_1__1_n_0      |                                   |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG | u_sha256_2/W[44][31]_i_1__1_n_0      |                                   |               15 |             32 |         2.13 |
+|  clk_IBUF_BUFG | u_sha256_2/W[60][31]_i_1__1_n_0      |                                   |               17 |             32 |         1.88 |
+|  clk_IBUF_BUFG | u_sha256_2/W[9][31]_i_2__1_n_0       | u_sha256_2/W[9][31]_i_1__1_n_0    |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG | u_sha256_2/W[5][31]_i_2__1_n_0       | u_sha256_2/W[5][31]_i_1__1_n_0    |               17 |             32 |         1.88 |
+|  clk_IBUF_BUFG | lcd0/init_e_i_1_n_0                  | u_sha256_1/reset_n                |                8 |             32 |         4.00 |
+|  clk_IBUF_BUFG | u_sha256_0/W[14][31]_i_2_n_0         | u_sha256_0/W[14][31]_i_1_n_0      |               13 |             32 |         2.46 |
+|  clk_IBUF_BUFG | u_sha256_0/W[18][31]_i_1_n_0         |                                   |               17 |             32 |         1.88 |
+|  clk_IBUF_BUFG | u_sha256_0/W[17][31]_i_1_n_0         |                                   |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG | u_sha256_0/W[19][31]_i_1_n_0         |                                   |               19 |             32 |         1.68 |
+|  clk_IBUF_BUFG | u_sha256_0/W[15][31]_i_2_n_0         | u_sha256_0/W[15][31]_i_1_n_0      |               19 |             32 |         1.68 |
+|  clk_IBUF_BUFG | u_sha256_0/W[12][31]_i_2_n_0         | u_sha256_0/W[12][31]_i_1_n_0      |               15 |             32 |         2.13 |
+|  clk_IBUF_BUFG | u_sha256_0/W[16][31]_i_1_n_0         |                                   |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG | u_sha256_0/W[10][31]_i_2_n_0         | u_sha256_0/W[10][31]_i_1_n_0      |               10 |             32 |         3.20 |
+|  clk_IBUF_BUFG | u_sha256_0/W[11][31]_i_2_n_0         | u_sha256_0/W[11][31]_i_1_n_0      |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG | u_sha256_0/W[13][31]_i_2_n_0         | u_sha256_0/W[13][31]_i_1_n_0      |               13 |             32 |         2.46 |
+|  clk_IBUF_BUFG | u_sha256_0/W[21][31]_i_1_n_0         |                                   |               18 |             32 |         1.78 |
+|  clk_IBUF_BUFG | u_sha256_0/W[24][31]_i_1_n_0         |                                   |               21 |             32 |         1.52 |
+|  clk_IBUF_BUFG | u_sha256_0/W[28][31]_i_1_n_0         |                                   |               20 |             32 |         1.60 |
+|  clk_IBUF_BUFG | u_sha256_0/W[22][31]_i_1_n_0         |                                   |               18 |             32 |         1.78 |
+|  clk_IBUF_BUFG | u_sha256_0/W[20][31]_i_1_n_0         |                                   |               20 |             32 |         1.60 |
+|  clk_IBUF_BUFG | u_sha256_0/W[25][31]_i_1_n_0         |                                   |               17 |             32 |         1.88 |
+|  clk_IBUF_BUFG | u_sha256_0/W[29][31]_i_1_n_0         |                                   |               17 |             32 |         1.88 |
+|  clk_IBUF_BUFG | u_sha256_0/W[27][31]_i_1_n_0         |                                   |               21 |             32 |         1.52 |
+|  clk_IBUF_BUFG | u_sha256_0/W[23][31]_i_1_n_0         |                                   |               18 |             32 |         1.78 |
+|  clk_IBUF_BUFG | u_sha256_3/W[12][31]_i_2__2_n_0      | u_sha256_3/W[12][31]_i_1__2_n_0   |               10 |             32 |         3.20 |
+|  clk_IBUF_BUFG | u_sha256_0/W[26][31]_i_1_n_0         |                                   |               21 |             32 |         1.52 |
+|  clk_IBUF_BUFG | u_sha256_0/W[37][31]_i_1_n_0         |                                   |               17 |             32 |         1.88 |
+|  clk_IBUF_BUFG | u_sha256_3/W[15][31]_i_2__2_n_0      | u_sha256_3/W[15][31]_i_1__2_n_0   |               13 |             32 |         2.46 |
+|  clk_IBUF_BUFG | u_sha256_3/W[14][31]_i_2__2_n_0      | u_sha256_3/W[14][31]_i_1__2_n_0   |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG | u_sha256_3/W[10][31]_i_2__2_n_0      | u_sha256_3/W[10][31]_i_1__2_n_0   |                9 |             32 |         3.56 |
+|  clk_IBUF_BUFG | u_sha256_3/W[11][31]_i_2__2_n_0      | u_sha256_3/W[11][31]_i_1__2_n_0   |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG | u_sha256_3/W[17][31]_i_1__2_n_0      |                                   |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG | u_sha256_3/W[18][31]_i_1__2_n_0      |                                   |               18 |             32 |         1.78 |
+|  clk_IBUF_BUFG | u_sha256_3/W[16][31]_i_1__2_n_0      |                                   |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG | u_sha256_3/W[13][31]_i_2__2_n_0      | u_sha256_3/W[13][31]_i_1__2_n_0   |               13 |             32 |         2.46 |
+|  clk_IBUF_BUFG | u_sha256_3/W[19][31]_i_1__2_n_0      |                                   |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG | u_sha256_0/W[31][31]_i_1_n_0         |                                   |               18 |             32 |         1.78 |
+|  clk_IBUF_BUFG | u_sha256_0/W[38][31]_i_1_n_0         |                                   |               18 |             32 |         1.78 |
+|  clk_IBUF_BUFG | u_sha256_3/W[21][31]_i_1__2_n_0      |                                   |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG | u_sha256_3/W[25][31]_i_1__2_n_0      |                                   |               15 |             32 |         2.13 |
+|  clk_IBUF_BUFG | u_sha256_3/W[24][31]_i_1__2_n_0      |                                   |               10 |             32 |         3.20 |
+|  clk_IBUF_BUFG | u_sha256_3/W[27][31]_i_1__2_n_0      |                                   |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG | u_sha256_3/W[29][31]_i_1__2_n_0      |                                   |               20 |             32 |         1.60 |
+|  clk_IBUF_BUFG | u_sha256_3/W[22][31]_i_1__2_n_0      |                                   |               15 |             32 |         2.13 |
+|  clk_IBUF_BUFG | u_sha256_3/W[23][31]_i_1__2_n_0      |                                   |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG | u_sha256_3/W[26][31]_i_1__2_n_0      |                                   |               13 |             32 |         2.46 |
+|  clk_IBUF_BUFG | u_sha256_3/W[28][31]_i_1__2_n_0      |                                   |               20 |             32 |         1.60 |
+|  clk_IBUF_BUFG | u_sha256_3/W[20][31]_i_1__2_n_0      |                                   |               13 |             32 |         2.46 |
+|  clk_IBUF_BUFG | u_sha256_0/W[35][31]_i_1_n_0         |                                   |               17 |             32 |         1.88 |
+|  clk_IBUF_BUFG | u_sha256_0/W[34][31]_i_1_n_0         |                                   |               18 |             32 |         1.78 |
+|  clk_IBUF_BUFG | u_sha256_3/W[33][31]_i_1__2_n_0      |                                   |               15 |             32 |         2.13 |
+|  clk_IBUF_BUFG | u_sha256_3/W[30][31]_i_1__2_n_0      |                                   |               15 |             32 |         2.13 |
+|  clk_IBUF_BUFG | u_sha256_3/W[38][31]_i_1__2_n_0      |                                   |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG | u_sha256_3/W[39][31]_i_1__2_n_0      |                                   |               17 |             32 |         1.88 |
+|  clk_IBUF_BUFG | u_sha256_3/W[34][31]_i_1__2_n_0      |                                   |               19 |             32 |         1.68 |
+|  clk_IBUF_BUFG | u_sha256_3/W[32][31]_i_1__2_n_0      |                                   |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG | u_sha256_3/W[31][31]_i_1__2_n_0      |                                   |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG | u_sha256_3/W[35][31]_i_1__2_n_0      |                                   |               15 |             32 |         2.13 |
+|  clk_IBUF_BUFG | u_sha256_3/W[36][31]_i_1__2_n_0      |                                   |               17 |             32 |         1.88 |
+|  clk_IBUF_BUFG | u_sha256_3/W[37][31]_i_1__2_n_0      |                                   |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG | u_sha256_3/W[47][31]_i_1__2_n_0      |                                   |               13 |             32 |         2.46 |
+|  clk_IBUF_BUFG | u_sha256_3/W[58][31]_i_1__2_n_0      |                                   |               19 |             32 |         1.68 |
+|  clk_IBUF_BUFG | u_sha256_3/W[45][31]_i_1__2_n_0      |                                   |               15 |             32 |         2.13 |
+|  clk_IBUF_BUFG | u_sha256_3/W[44][31]_i_1__2_n_0      |                                   |               21 |             32 |         1.52 |
+|  clk_IBUF_BUFG | u_sha256_3/W[46][31]_i_1__2_n_0      |                                   |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG | u_sha256_3/W[59][31]_i_1__2_n_0      |                                   |               13 |             32 |         2.46 |
+|  clk_IBUF_BUFG | u_sha256_3/W[63][31]_i_1__2_n_0      |                                   |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG | u_sha256_3/W[41][31]_i_1__2_n_0      |                                   |               12 |             32 |         2.67 |
+|  clk_IBUF_BUFG | u_sha256_0/W[33][31]_i_1_n_0         |                                   |               15 |             32 |         2.13 |
+|  clk_IBUF_BUFG | u_sha256_3/W[51][31]_i_1__2_n_0      |                                   |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG | u_sha256_3/W[5][31]_i_2__2_n_0       | u_sha256_3/W[5][31]_i_1__2_n_0    |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG | u_sha256_3/W[61][31]_i_1__2_n_0      |                                   |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG | u_sha256_3/W[60][31]_i_1__2_n_0      |                                   |               19 |             32 |         1.68 |
+|  clk_IBUF_BUFG | u_sha256_3/W[53][31]_i_1__2_n_0      |                                   |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG | u_sha256_3/W[40][31]_i_1__2_n_0      |                                   |               18 |             32 |         1.78 |
+|  clk_IBUF_BUFG | u_sha256_3/W[43][31]_i_1__2_n_0      |                                   |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG | u_sha256_3/W[48][31]_i_1__2_n_0      |                                   |               17 |             32 |         1.88 |
+|  clk_IBUF_BUFG | u_sha256_3/W[42][31]_i_1__2_n_0      |                                   |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG | u_sha256_3/W[3][31]_i_2__2_n_0       | u_sha256_3/W[3][31]_i_1__2_n_0    |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG | u_sha256_3/W[4][31]_i_2__2_n_0       | u_sha256_3/W[4][31]_i_1__2_n_0    |               15 |             32 |         2.13 |
+|  clk_IBUF_BUFG | u_sha256_3/W[50][31]_i_1__2_n_0      |                                   |               13 |             32 |         2.46 |
+|  clk_IBUF_BUFG | u_sha256_3/W[54][31]_i_1__2_n_0      |                                   |               11 |             32 |         2.91 |
+|  clk_IBUF_BUFG | u_sha256_3/W[52][31]_i_1__2_n_0      |                                   |               15 |             32 |         2.13 |
+|  clk_IBUF_BUFG | u_sha256_3/W[57][31]_i_1__2_n_0      |                                   |               15 |             32 |         2.13 |
+|  clk_IBUF_BUFG | u_sha256_3/W[55][31]_i_1__2_n_0      |                                   |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG | u_sha256_3/W[62][31]_i_1__2_n_0      |                                   |               13 |             32 |         2.46 |
+|  clk_IBUF_BUFG | u_sha256_3/W[49][31]_i_1__2_n_0      |                                   |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG | u_sha256_3/W[7][31]_i_2__2_n_0       | u_sha256_3/W[7][31]_i_1__2_n_0    |               15 |             32 |         2.13 |
+|  clk_IBUF_BUFG | u_sha256_3/W[8][31]_i_2__2_n_0       | u_sha256_3/W[8][31]_i_1__2_n_0    |               18 |             32 |         1.78 |
+|  clk_IBUF_BUFG | u_sha256_3/W[9][31]_i_2__2_n_0       | u_sha256_3/W[9][31]_i_1__2_n_0    |               18 |             32 |         1.78 |
+|  clk_IBUF_BUFG | u_sha256_3/W[6][31]_i_2__3_n_0       | u_sha256_3/W[6][31]_i_1__0_n_0    |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG | u_sha256_0/W[30][31]_i_1_n_0         |                                   |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG | u_sha256_0/W[32][31]_i_1_n_0         |                                   |               18 |             32 |         1.78 |
+|  clk_IBUF_BUFG | u_sha256_0/W[36][31]_i_1_n_0         |                                   |               18 |             32 |         1.78 |
+|  clk_IBUF_BUFG | u_sha256_0/W[39][31]_i_1_n_0         |                                   |               15 |             32 |         2.13 |
+|  clk_IBUF_BUFG | u_sha256_0/W[41][31]_i_1_n_0         |                                   |               17 |             32 |         1.88 |
+|  clk_IBUF_BUFG | u_sha256_4/W[23][31]_i_1__3_n_0      |                                   |               20 |             32 |         1.60 |
+|  clk_IBUF_BUFG | u_sha256_4/W[21][31]_i_1__3_n_0      |                                   |               13 |             32 |         2.46 |
+|  clk_IBUF_BUFG | u_sha256_4/W[24][31]_i_1__3_n_0      |                                   |               17 |             32 |         1.88 |
+|  clk_IBUF_BUFG | u_sha256_4/W[29][31]_i_1__3_n_0      |                                   |               20 |             32 |         1.60 |
+|  clk_IBUF_BUFG | u_sha256_4/W[20][31]_i_1__3_n_0      |                                   |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG | u_sha256_4/W[22][31]_i_1__3_n_0      |                                   |               12 |             32 |         2.67 |
+|  clk_IBUF_BUFG | u_sha256_4/W[25][31]_i_1__3_n_0      |                                   |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG | u_sha256_4/W[27][31]_i_1__3_n_0      |                                   |               18 |             32 |         1.78 |
+|  clk_IBUF_BUFG | u_sha256_4/W[28][31]_i_1__3_n_0      |                                   |               17 |             32 |         1.88 |
+|  clk_IBUF_BUFG | u_sha256_4/W[26][31]_i_1__3_n_0      |                                   |               15 |             32 |         2.13 |
+|  clk_IBUF_BUFG | u_sha256_0/W[42][31]_i_1_n_0         |                                   |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG | u_sha256_0/W[45][31]_i_1_n_0         |                                   |               18 |             32 |         1.78 |
+|  clk_IBUF_BUFG | u_sha256_4/W[12][31]_i_2__3_n_0      | u_sha256_4/W[12][31]_i_1__3_n_0   |               15 |             32 |         2.13 |
+|  clk_IBUF_BUFG | u_sha256_4/W[10][31]_i_2__3_n_0      | u_sha256_4/W[10][31]_i_1__3_n_0   |               10 |             32 |         3.20 |
+|  clk_IBUF_BUFG | u_sha256_4/W[11][31]_i_2__3_n_0      | u_sha256_4/W[11][31]_i_1__3_n_0   |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG | u_sha256_4/W[13][31]_i_2__3_n_0      | u_sha256_4/W[13][31]_i_1__3_n_0   |               17 |             32 |         1.88 |
+|  clk_IBUF_BUFG | u_sha256_4/W[19][31]_i_1__3_n_0      |                                   |               13 |             32 |         2.46 |
+|  clk_IBUF_BUFG | u_sha256_4/W[17][31]_i_1__3_n_0      |                                   |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG | u_sha256_4/W[14][31]_i_2__3_n_0      | u_sha256_4/W[14][31]_i_1__3_n_0   |               17 |             32 |         1.88 |
+|  clk_IBUF_BUFG | u_sha256_4/W[18][31]_i_1__3_n_0      |                                   |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG | u_sha256_4/W[15][31]_i_2__3_n_0      | u_sha256_4/W[15][31]_i_1__3_n_0   |               13 |             32 |         2.46 |
+|  clk_IBUF_BUFG | u_sha256_3/W[56][31]_i_1__2_n_0      |                                   |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG | u_sha256_0/W[51][31]_i_1_n_0         |                                   |               19 |             32 |         1.68 |
+|  clk_IBUF_BUFG | u_sha256_0/W[57][31]_i_1_n_0         |                                   |               19 |             32 |         1.68 |
+|  clk_IBUF_BUFG | u_sha256_0/W[44][31]_i_1_n_0         |                                   |               19 |             32 |         1.68 |
+|  clk_IBUF_BUFG | u_sha256_0/W[47][31]_i_1_n_0         |                                   |               22 |             32 |         1.45 |
+|  clk_IBUF_BUFG | u_sha256_4/W[35][31]_i_1__3_n_0      |                                   |               12 |             32 |         2.67 |
+|  clk_IBUF_BUFG | u_sha256_4/W[38][31]_i_1__3_n_0      |                                   |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG | u_sha256_4/W[31][31]_i_1__3_n_0      |                                   |               15 |             32 |         2.13 |
+|  clk_IBUF_BUFG | u_sha256_4/W[33][31]_i_1__3_n_0      |                                   |               15 |             32 |         2.13 |
+|  clk_IBUF_BUFG | u_sha256_4/W[37][31]_i_1__3_n_0      |                                   |               11 |             32 |         2.91 |
+|  clk_IBUF_BUFG | u_sha256_4/W[34][31]_i_1__3_n_0      |                                   |               11 |             32 |         2.91 |
+|  clk_IBUF_BUFG | u_sha256_4/W[32][31]_i_1__3_n_0      |                                   |               12 |             32 |         2.67 |
+|  clk_IBUF_BUFG | u_sha256_4/W[39][31]_i_1__3_n_0      |                                   |               13 |             32 |         2.46 |
+|  clk_IBUF_BUFG | u_sha256_4/W[30][31]_i_1__3_n_0      |                                   |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG | u_sha256_4/W[36][31]_i_1__3_n_0      |                                   |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG | u_sha256_4/W[48][31]_i_1__3_n_0      |                                   |               12 |             32 |         2.67 |
+|  clk_IBUF_BUFG | u_sha256_4/W[52][31]_i_1__3_n_0      |                                   |               17 |             32 |         1.88 |
+|  clk_IBUF_BUFG | u_sha256_4/W[50][31]_i_1__3_n_0      |                                   |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG | u_sha256_4/W[56][31]_i_1__3_n_0      |                                   |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG | u_sha256_4/W[40][31]_i_1__3_n_0      |                                   |               18 |             32 |         1.78 |
+|  clk_IBUF_BUFG | u_sha256_4/W[45][31]_i_1__3_n_0      |                                   |               15 |             32 |         2.13 |
+|  clk_IBUF_BUFG | u_sha256_4/W[43][31]_i_1__3_n_0      |                                   |               21 |             32 |         1.52 |
+|  clk_IBUF_BUFG | u_sha256_4/W[59][31]_i_1__3_n_0      |                                   |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG | u_sha256_4/W[3][31]_i_2__3_n_0       | u_sha256_4/W[3][31]_i_1__3_n_0    |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG | u_sha256_4/W[54][31]_i_1__3_n_0      |                                   |               15 |             32 |         2.13 |
+|  clk_IBUF_BUFG | u_sha256_4/W[47][31]_i_1__3_n_0      |                                   |               12 |             32 |         2.67 |
+|  clk_IBUF_BUFG | u_sha256_4/W[42][31]_i_1__3_n_0      |                                   |               13 |             32 |         2.46 |
+|  clk_IBUF_BUFG | u_sha256_4/W[44][31]_i_1__3_n_0      |                                   |               17 |             32 |         1.88 |
+|  clk_IBUF_BUFG | u_sha256_4/W[53][31]_i_1__3_n_0      |                                   |               13 |             32 |         2.46 |
+|  clk_IBUF_BUFG | u_sha256_4/W[57][31]_i_1__3_n_0      |                                   |               13 |             32 |         2.46 |
+|  clk_IBUF_BUFG | u_sha256_4/W[58][31]_i_1__3_n_0      |                                   |               13 |             32 |         2.46 |
+|  clk_IBUF_BUFG | u_sha256_4/W[51][31]_i_1__3_n_0      |                                   |               15 |             32 |         2.13 |
+|  clk_IBUF_BUFG | u_sha256_4/W[49][31]_i_1__3_n_0      |                                   |               13 |             32 |         2.46 |
+|  clk_IBUF_BUFG | u_sha256_4/W[55][31]_i_1__3_n_0      |                                   |               15 |             32 |         2.13 |
+|  clk_IBUF_BUFG | u_sha256_4/W[5][31]_i_2__3_n_0       | u_sha256_4/W[5][31]_i_1__3_n_0    |               13 |             32 |         2.46 |
+|  clk_IBUF_BUFG | u_sha256_4/W[60][31]_i_1__3_n_0      |                                   |               11 |             32 |         2.91 |
+|  clk_IBUF_BUFG | u_sha256_4/W[41][31]_i_1__3_n_0      |                                   |               13 |             32 |         2.46 |
+|  clk_IBUF_BUFG | u_sha256_4/W[4][31]_i_2__3_n_0       | u_sha256_4/W[4][31]_i_1__3_n_0    |               17 |             32 |         1.88 |
+|  clk_IBUF_BUFG | u_sha256_4/W[46][31]_i_1__3_n_0      |                                   |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG | u_sha256_4/W[63][31]_i_1__3_n_0      |                                   |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG | u_sha256_4/W[6][31]_i_2_n_0          | u_sha256_4/W[6][31]_i_1_n_0       |               15 |             32 |         2.13 |
+|  clk_IBUF_BUFG | u_sha256_4/W[61][31]_i_1__3_n_0      |                                   |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG | u_sha256_4/W[62][31]_i_1__3_n_0      |                                   |               15 |             32 |         2.13 |
+|  clk_IBUF_BUFG | u_sha256_4/W[9][31]_i_2__3_n_0       | u_sha256_4/W[9][31]_i_1__3_n_0    |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG | u_sha256_4/W[8][31]_i_2__3_n_0       | u_sha256_4/W[8][31]_i_1__3_n_0    |               15 |             32 |         2.13 |
+|  clk_IBUF_BUFG | u_sha256_4/W[7][31]_i_2__3_n_0       | u_sha256_4/W[7][31]_i_1__3_n_0    |               20 |             32 |         1.60 |
+|  clk_IBUF_BUFG | u_sha256_0/W[50][31]_i_1_n_0         |                                   |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG | u_sha256_4/W[16][31]_i_1__3_n_0      |                                   |               11 |             32 |         2.91 |
+|  clk_IBUF_BUFG | row_A                                |                                   |               13 |             34 |         2.62 |
+|  clk_IBUF_BUFG | restart                              | u_sha256_1/reset_n                |               13 |             40 |         3.08 |
+|  clk_IBUF_BUFG | u_sha256_4/w_counter[6]_i_1__3_n_0   | u_sha256_1/reset_n                |               20 |             45 |         2.25 |
+|  clk_IBUF_BUFG | u_sha256_3/w_counter[6]_i_1__2_n_0   | u_sha256_1/reset_n                |               29 |             45 |         1.55 |
+|  clk_IBUF_BUFG | u_sha256_2/w_counter[6]_i_1__1_n_0   | u_sha256_1/reset_n                |               29 |             46 |         1.59 |
+|  clk_IBUF_BUFG | u_sha256_0/w_counter[6]_i_1_n_0      | u_sha256_1/reset_n                |               24 |             46 |         1.92 |
+|  clk_IBUF_BUFG | u_sha256_1/w_counter[6]_i_1__0_n_0   | u_sha256_1/reset_n                |               22 |             47 |         2.14 |
+|  clk_IBUF_BUFG | u_sha256_2/E[0]                      |                                   |                9 |             52 |         5.78 |
+|  clk_IBUF_BUFG | u_sha256_1/sha_start_1_reg[0]        |                                   |               15 |             54 |         3.60 |
+|  clk_IBUF_BUFG | u_sha256_0/sha_start_0_reg[0]        |                                   |               14 |             54 |         3.86 |
+|  clk_IBUF_BUFG | u_sha256_4/E[0]                      |                                   |               19 |             54 |         2.84 |
+|  clk_IBUF_BUFG | u_sha256_3/sha_start_3_reg[0]        |                                   |               15 |             54 |         3.60 |
+|  clk_IBUF_BUFG | u_sha256_0/sha_start_0153_out        | timer                             |               14 |             56 |         4.00 |
+|  clk_IBUF_BUFG | row_A                                | timer                             |               19 |             60 |         3.16 |
+|  clk_IBUF_BUFG | u_sha256_0/tmpt_w1                   | u_sha256_0/tmpt_w2[31]_i_1__1_n_0 |               15 |             64 |         4.27 |
+|  clk_IBUF_BUFG | u_sha256_0/T1                        | u_sha256_1/reset_n                |               16 |             64 |         4.00 |
+|  clk_IBUF_BUFG | u_sha256_3/T1                        | u_sha256_1/reset_n                |               16 |             64 |         4.00 |
+|  clk_IBUF_BUFG | u_sha256_2/T1                        | u_sha256_1/reset_n                |               16 |             64 |         4.00 |
+|  clk_IBUF_BUFG | u_sha256_4/T1                        | u_sha256_1/reset_n                |               16 |             64 |         4.00 |
+|  clk_IBUF_BUFG | u_sha256_3/tmpt_w1                   | u_sha256_3/tmpt_w2[31]_i_1__3_n_0 |               16 |             64 |         4.00 |
+|  clk_IBUF_BUFG | u_sha256_1/tmpt_w1                   | u_sha256_1/tmpt_w2[31]_i_1__2_n_0 |               14 |             64 |         4.57 |
+|  clk_IBUF_BUFG | u_sha256_4/tmpt_w1                   | u_sha256_4/tmpt_w2[31]_i_1_n_0    |               16 |             64 |         4.00 |
+|  clk_IBUF_BUFG | u_sha256_2/tmpt_w1                   | u_sha256_2/tmpt_w2[31]_i_1__0_n_0 |               15 |             64 |         4.27 |
+|  clk_IBUF_BUFG | u_sha256_1/T1                        | u_sha256_1/reset_n                |               16 |             64 |         4.00 |
+|  clk_IBUF_BUFG |                                      | u_sha256_1/reset_n                |               41 |             71 |         1.73 |
+|  clk_IBUF_BUFG | row_A                                | row_A[95]_i_1_n_0                 |               22 |             82 |         3.73 |
+|  clk_IBUF_BUFG | u_sha256_1/H[7][31]_i_1__0_n_0       | u_sha256_1/reset_n                |               41 |            256 |         6.24 |
+|  clk_IBUF_BUFG | u_sha256_2/hash_out[255]_i_1__0_n_0  |                                   |               82 |            256 |         3.12 |
+|  clk_IBUF_BUFG | u_sha256_0/hash_out[255]_i_1__1_n_0  |                                   |               68 |            256 |         3.76 |
+|  clk_IBUF_BUFG | u_sha256_0/a                         | u_sha256_1/reset_n                |               53 |            256 |         4.83 |
+|  clk_IBUF_BUFG | u_sha256_3/H[7][31]_i_1__2_n_0       | u_sha256_1/reset_n                |               40 |            256 |         6.40 |
+|  clk_IBUF_BUFG | u_sha256_2/H[7][31]_i_1__1_n_0       | u_sha256_1/reset_n                |               42 |            256 |         6.10 |
+|  clk_IBUF_BUFG | u_sha256_4/H[7][31]_i_1__3_n_0       | u_sha256_1/reset_n                |               37 |            256 |         6.92 |
+|  clk_IBUF_BUFG | u_sha256_3/a                         | u_sha256_1/reset_n                |               52 |            256 |         4.92 |
+|  clk_IBUF_BUFG | u_sha256_3/hash_out[255]_i_1__3_n_0  |                                   |               69 |            256 |         3.71 |
+|  clk_IBUF_BUFG | u_sha256_2/a                         | u_sha256_1/reset_n                |               45 |            256 |         5.69 |
+|  clk_IBUF_BUFG | u_sha256_1/hash_out[255]_i_1__2_n_0  |                                   |               74 |            256 |         3.46 |
+|  clk_IBUF_BUFG | u_sha256_4/a                         | u_sha256_1/reset_n                |               56 |            256 |         4.57 |
+|  clk_IBUF_BUFG | u_sha256_4/hash_out[255]_i_1_n_0     |                                   |               64 |            256 |         4.00 |
+|  clk_IBUF_BUFG | u_sha256_1/a                         | u_sha256_1/reset_n                |               56 |            256 |         4.57 |
+|  clk_IBUF_BUFG | u_sha256_0/H[7][31]_i_1_n_0          | u_sha256_1/reset_n                |               41 |            256 |         6.24 |
++----------------+--------------------------------------+-----------------------------------+------------------+----------------+--------------+
+
+

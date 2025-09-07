@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Sun Nov 10 20:17:47 2024
+# Process ID: 222404
+# Current directory: D:/DLab/Lab/lab8_for_student/lab8.runs/synth_1
+# Command line: vivado.exe -log lab8.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source lab8.tcl
+# Log file: D:/DLab/Lab/lab8_for_student/lab8.runs/synth_1/lab8.vds
+# Journal file: D:/DLab/Lab/lab8_for_student/lab8.runs/synth_1\vivado.jou
+# Running On        :Apollos-notebook
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :22631
+# Processor Detail  :13th Gen Intel(R) Core(TM) i7-13700HX
+# CPU Frequency     :2304 MHz
+# CPU Physical cores:16
+# CPU Logical cores :24
+# Host memory       :16886 MB
+# Swap memory       :28697 MB
+# Total Virtual     :45583 MB
+# Available Virtual :7504 MB
+#-----------------------------------------------------------
+source lab8.tcl -notrace

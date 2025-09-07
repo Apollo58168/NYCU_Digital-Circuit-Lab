@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Wed Oct 23 01:51:55 2024
+# Process ID: 80684
+# Current directory: D:/DLab/lab_7_for_students
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent76620 D:\DLab\lab_7_for_students\lab_7.xpr
+# Log file: D:/DLab/lab_7_for_students/vivado.log
+# Journal file: D:/DLab/lab_7_for_students\vivado.jou
+# Running On        :Apollos-notebook
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :22631
+# Processor Detail  :13th Gen Intel(R) Core(TM) i7-13700HX
+# CPU Frequency     :2304 MHz
+# CPU Physical cores:16
+# CPU Logical cores :24
+# Host memory       :16886 MB
+# Swap memory       :25769 MB
+# Total Virtual     :42655 MB
+# Available Virtual :13146 MB
+#-----------------------------------------------------------
+start_gui
+open_project D:/DLab/lab_7_for_students/lab_7.xpr
+update_compile_order -fileset sources_1

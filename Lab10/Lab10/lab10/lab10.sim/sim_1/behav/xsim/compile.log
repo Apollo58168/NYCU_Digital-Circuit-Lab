@@ -1,0 +1,10 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/DLab/Lab/lab10_for_student/Lab10/lab10/lab10.srcs/sources_1/clk_divider.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_divider
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/DLab/Lab/lab10_for_student/Lab10/lab10/lab10.srcs/sources_1/sram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sram
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/DLab/Lab/lab10_for_student/Lab10/lab10/lab10.srcs/sources_1/vga_sync.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_sync
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/DLab/Lab/lab10_for_student/Lab10/lab10/lab10.srcs/sources_1/lab10.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lab10
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/DLab/Lab/lab10_for_student/Lab10/lab10/lab10.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
