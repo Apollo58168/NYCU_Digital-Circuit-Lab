@@ -1,0 +1,44 @@
+# ============================================================
+# Vivado / Xilinx generated files to ignore
+# ============================================================
+
+# Simulation / waveform database
+*.wdb
+*.wdf
+*.wcfg
+*.pb
+
+# Logs and reports
+*.jou
+*.log
+*.xml
+*.rpt
+
+# Vivado generated folders
+*.cache/
+*.hw/
+*.sim/
+*.runs/
+*.ip_user_files/
+*.Xil/
+*.gen/
+
+# Windows metadata (避免 .Zone.Identifier 亂入)
+*:Zone.Identifier
+
+# ============================================================
+# Keep important design sources
+# ============================================================
+
+# RTL source files
+!**/*.v
+!**/*.sv
+
+# Constraints
+!**/*.xdc
+
+# Testbenches / TCL scripts
+!**/*.tcl
+
+# Vivado project file
+!**/*.xpr

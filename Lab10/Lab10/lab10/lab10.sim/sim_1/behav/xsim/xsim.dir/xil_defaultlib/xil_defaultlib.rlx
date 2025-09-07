@@ -1,9 +1,0 @@
-0.7
-2020.2
-May 22 2024
-19:03:11
-D:/DLab/Lab/lab10_for_student/Lab10/lab10/lab10.sim/sim_1/behav/xsim/glbl.v,1708598507,verilog,,,,glbl,,,,,,,,
-D:/DLab/Lab/lab10_for_student/Lab10/lab10/lab10.srcs/sources_1/clk_divider.v,1732257137,verilog,,D:/DLab/Lab/lab10_for_student/Lab10/lab10/lab10.srcs/sources_1/sram.v,,clk_divider,,,,,,,,
-D:/DLab/Lab/lab10_for_student/Lab10/lab10/lab10.srcs/sources_1/lab10.v,1732396076,verilog,,,,lab10,,,,,,,,
-D:/DLab/Lab/lab10_for_student/Lab10/lab10/lab10.srcs/sources_1/sram.v,1732357436,verilog,,D:/DLab/Lab/lab10_for_student/Lab10/lab10/lab10.srcs/sources_1/vga_sync.v,,sram,,,,,,,,
-D:/DLab/Lab/lab10_for_student/Lab10/lab10/lab10.srcs/sources_1/vga_sync.v,1732257137,verilog,,D:/DLab/Lab/lab10_for_student/Lab10/lab10/lab10.srcs/sources_1/lab10.v,,vga_sync,,,,,,,,
